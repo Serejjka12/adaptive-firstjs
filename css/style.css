@@ -1,0 +1,336 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    color: black;
+}
+
+.container {
+    max-width: 1230px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+ы .title-1 {
+    font-weight: 600;
+    font-size: 34px;
+}
+
+.btn {
+    /*Чтобы работала как блок */
+    display: inline-block;
+    background-color: #000;
+    padding: 7px 22px;
+    border-radius: 30px;
+    font-size: 18px;
+    color: white;
+    transition: background-color 0.2s ease-in, top 0.2s ease-in;
+}
+.btn:hover,
+.btn:focus {
+    background-color: #544e4e;
+}
+.btn:active {
+    position: relative;
+    top: 1px;
+    background-color: #000;
+}
+
+/*Начинаем верстать шапку*/
+.header {
+    /*HEader nav*/
+    /*Header content*/
+}
+.header {
+    padding-top: 46px;
+    background-color: #f1f1f1;
+}
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 76px;
+}
+.header__items {
+    display: flex;
+    -moz-column-gap: 50px;
+    column-gap: 50px;
+    font-weight: 500;
+    font-size: 14px;
+}
+.header__button {
+    display: none; /*кнопка е видна */
+    /*и нужно сделать так чтоб она отображальсась на ширине нашего контейнера */
+}
+.header__link {
+    color: black;
+}
+.header__row {
+    display: flex;
+    justify-content: space-between;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+}
+.header__heading {
+    font-size: 44px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.header__content {
+    max-width: 500px;
+    margin-top: 124px;
+}
+.header__content p {
+    font-size: 14px;
+    line-height: 200%;
+}
+
+.logo {
+    font-weight: 700;
+    line-height: 100%;
+    color: #000;
+    font-size: 32px;
+    padding: 0px 12px 3px 0px;
+    position: relative;
+}
+.logo::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: #fda300;
+    border-radius: 8px;
+    right: 0;
+    bottom: 0;
+}
+
+/*Service*/
+.services {
+    padding: 90px 0px;
+}
+.services__row {
+    display: flex;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+    flex-wrap: wrap;
+    row-gap: 60px;
+}
+.services__card {
+    flex: 1 1 0;
+    min-width: 315px;
+}
+.services__card-img {
+    margin-bottom: 30px;
+}
+.services__card-title {
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.services__card p {
+    line-height: 200%;
+}
+
+/*Portfolio*/
+.portfolio {
+    background: #f1f1f1;
+    padding: 90px 0px;
+}
+.portfolio__title {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.project {
+    text-align: center;
+}
+.project + .project {
+    margin-top: 90px;
+}
+.project__img {
+    margin-bottom: 40px;
+    max-width: 100%;
+}
+.project__title {
+    font-size: 18px;
+}
+.project__title a {
+    color: var(--black, #070707);
+    text-decoration-line: underline;
+}
+
+/*Footer*/
+.contacts {
+    padding: 90px 0;
+    text-align: center;
+}
+.contacts__title {
+    margin-bottom: 40px;
+}
+.contacts__content {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    margin-bottom: 40px;
+    max-width: 480px;
+}
+.contacts__content p + p {
+    /*В том случае если будут еще параграфы и оступ будет равен размеру шрифта в этом абзатсе*/
+    margin-top: 1em;
+}
+.contacts__button {
+    margin-bottom: 80px;
+}
+.contacts__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -moz-column-gap: 60px;
+    column-gap: 60px;
+    margin-bottom: 40px;
+}
+.contacts__footer {
+    color: #828282;
+    text-align: center;
+    font-size: 23px;
+}
+
+.active {
+    color: #606060;
+}
+
+.header {
+}
+.container {
+}
+.header__nav {
+}
+.logo {
+}
+.header__list {
+}
+.header__items {
+}
+.header__item {
+}
+.header__link {
+}
+.active {
+}
+.header__button {
+}
+.header {
+    &__nav {
+    }
+
+    &__list {
+    }
+
+    &__items {
+    }
+
+    &__item {
+    }
+
+    &__link {
+    }
+
+    &__button {
+    }
+}
+.container {
+}
+.logo {
+}
+.active {
+}

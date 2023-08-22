@@ -1,0 +1,230 @@
+//файл обнуляющих стилей
+@import "nullstyle.scss";
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+body {
+    font-family: Poppins, sans-serif;
+    color: black;
+}
+
+.container {
+    max-width: 1230px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+ы .title-1 {
+    font-weight: 600;
+    font-size: 34px;
+}
+.btn {
+    /*Чтобы работала как блок */
+    display: inline-block;
+    background-color: #000;
+    padding: 7px 22px;
+    border-radius: 30px;
+    font-size: 18px;
+    color: white;
+    transition: background-color 0.2s ease-in, top 0.2s ease-in;
+    &:hover,
+    &:focus {
+        background-color: #544e4e;
+    }
+    &:active {
+        position: relative;
+        top: 1px;
+        background-color: #000;
+    }
+}
+
+/*Начинаем верстать шапку*/
+
+.header {
+    /*HEader nav*/
+    & {
+        padding-top: 46px;
+        background-color: #f1f1f1;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 76px;
+    }
+
+    &__items {
+        display: flex;
+        column-gap: 50px;
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    &__button {
+        display: none; /*кнопка е видна */
+        /*и нужно сделать так чтоб она отображальсась на ширине нашего контейнера */
+    }
+
+    &__item {
+    }
+
+    &__link {
+        color: black;
+    }
+    /*Header content*/
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 30px;
+    }
+
+    &__heading {
+        font-size: 44px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    &__content {
+        max-width: 500px;
+        // padding: 124px 0px 0px 0px;
+        margin-top: 124px;
+    }
+
+    &__content p {
+        font-size: 14px;
+        line-height: 200%;
+    }
+}
+.logo {
+    font-weight: 700;
+    line-height: 100%;
+    color: #000;
+    font-size: 32px;
+    padding: 0px 12px 3px 0px;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        background: #fda300;
+        border-radius: 8px;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+/*Service*/
+
+.services {
+    & {
+        padding: 90px 0px;
+    }
+    &__row {
+        display: flex;
+        column-gap: 30px;
+        flex-wrap: wrap;
+        row-gap: 60px;
+    }
+
+    &__card {
+        flex: 1 1 0;
+        min-width: 315px;
+    }
+
+    &__card-img {
+        margin-bottom: 30px;
+    }
+
+    &__card-title {
+        font-size: 24px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    &__card p {
+        line-height: 200%;
+    }
+}
+
+/*Portfolio*/
+
+.portfolio {
+    & {
+        background: #f1f1f1;
+        padding: 90px 0px;
+    }
+    &__title {
+        text-align: center;
+        margin-bottom: 70px;
+    }
+}
+
+.project {
+    & {
+        text-align: center;
+    }
+    & + & {
+        margin-top: 90px;
+    }
+    &__img {
+        margin-bottom: 40px;
+        max-width: 100%;
+    }
+
+    &__title {
+        font-size: 18px;
+    }
+    &__title a {
+        color: var(--black, #070707);
+        text-decoration-line: underline;
+    }
+}
+
+/*Footer*/
+
+.contacts {
+    & {
+        padding: 90px 0;
+        text-align: center;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__content {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 18px;
+        margin-bottom: 40px;
+        max-width: 480px;
+    }
+    &__content p + p {
+        /*В том случае если будут еще параграфы и оступ будет равен размеру шрифта в этом абзатсе*/
+        margin-top: 1em;
+    }
+
+    &__button {
+        margin-bottom: 80px;
+    }
+
+    &__social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 60px;
+        margin-bottom: 40px;
+    }
+
+    &__footer {
+        color: #828282;
+        text-align: center;
+        font-size: 23px;
+    }
+}
+
+.active {
+    color: #606060;
+}
